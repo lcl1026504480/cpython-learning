@@ -23,3 +23,9 @@ cdef class SomeMemory:
 
     def __dealloc__(self):
         PyMem_Free(self.data)  # no-op if self.data is NULL
+import cython
+
+if cython.compiled:
+    print("Yep, I'm compiled.")
+else:
+    print("Just a lowly interpreted script.")

@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Cython: memorymalloc2.pyx</title>
+    <title>Cython: purepython.pyx</title>
     <style type="text/css">
     
 body.cython { font-family: courier; font-size: 12; }
@@ -363,24 +363,89 @@ body.cython { font-family: courier; font-size: 12; }
     <span style="background-color: #FFFF00">Yellow lines</span> hint at Python interaction.<br />
     Click on a line that starts with a "<code>+</code>" to see the C code that Cython generated for it.
 </p>
-<p>Raw output: <a href="memorymalloc2.c">memorymalloc2.c</a></p>
-<div class="cython"><pre class="cython line score-0">&#xA0;<span class="">01</span>: <span class="k">from</span> <span class="nn">cpython.mem</span> <span class="k">cimport</span> <span class="n">PyMem_Malloc</span><span class="p">,</span> <span class="n">PyMem_Realloc</span><span class="p">,</span> <span class="n">PyMem_Free</span></pre>
+<p>Raw output: <a href="purepython.c">purepython.c</a></p>
+<div class="cython"><pre class="cython line score-0">&#xA0;<span class="">01</span>: <span class="k">import</span> <span class="nn">cython</span></pre>
 <pre class="cython line score-0">&#xA0;<span class="">02</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">03</span>: <span class="k">cdef</span> <span class="k">class</span> <span class="nf">SomeMemory</span><span class="p">:</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">04</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">05</span>:     <span class="k">cdef</span> <span class="kt">double</span> * <span class="nf">data</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">06</span>: </pre>
-<pre class="cython line score-27" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">07</span>:     <span class="k">def</span> <span class="nf">__cinit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">number</span><span class="p">):</span></pre>
-<pre class='cython code score-27 '>/* Python wrapper */
-static int __pyx_pw_13memorymalloc2_10SomeMemory_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_13memorymalloc2_10SomeMemory_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
-  size_t __pyx_v_number;
+<pre class="cython line score-0">&#xA0;<span class="">03</span>: </pre>
+<pre class="cython line score-16" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">04</span>: <span class="k">def</span> <span class="nf">func</span><span class="p">():</span></pre>
+<pre class='cython code score-16 '>/* Python wrapper */
+static PyObject *__pyx_pw_10purepython_1func(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_10purepython_1func = {"func", (PyCFunction)__pyx_pw_10purepython_1func, METH_NOARGS, 0};
+static PyObject *__pyx_pw_10purepython_1func(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
+  <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
+  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("func (wrapper)", 0);
+  __pyx_r = __pyx_pf_10purepython_func(__pyx_self);
+
+  /* function exit code */
+  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_10purepython_func(CYTHON_UNUSED PyObject *__pyx_self) {
+  CYTHON_UNUSED double __pyx_v_y;
+  CYTHON_UNUSED float __pyx_v_z;
+  CYTHON_UNUSED double __pyx_v_a;
+  CYTHON_UNUSED PyObject *__pyx_v_b = 0;
+  CYTHON_UNUSED PyObject *__pyx_v_c = 0;
+  PyObject *__pyx_r = NULL;
+  <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
+  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("func", 0);
+/* … */
+  /* function exit code */
+  __pyx_r = Py_None; <span class='pyx_macro_api'>__Pyx_INCREF</span>(Py_None);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_v_b);
+  <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_v_c);
+  <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
+  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
+  return __pyx_r;
+}
+/* … */
+  __pyx_tuple_ = <span class='py_c_api'>PyTuple_Pack</span>(6, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_z, __pyx_n_s_a, __pyx_n_s_b, __pyx_n_s_c);<span class='error_goto'> if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 4, __pyx_L1_error)</span>
+  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_tuple_);
+  <span class='refnanny'>__Pyx_GIVEREF</span>(__pyx_tuple_);
+/* … */
+  __pyx_t_1 = PyCFunction_NewEx(&amp;__pyx_mdef_10purepython_1func, NULL, __pyx_n_s_purepython);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 4, __pyx_L1_error)</span>
+  <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_1);
+  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_d, __pyx_n_s_func, __pyx_t_1) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 4, __pyx_L1_error)</span>
+  <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_codeobj__2 = (PyObject*)<span class='pyx_c_api'>__Pyx_PyCode_New</span>(0, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_purepython_pyx, __pyx_n_s_func, 4, __pyx_empty_bytes);<span class='error_goto'> if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 4, __pyx_L1_error)</span>
+</pre><pre class="cython line score-0">&#xA0;<span class="">05</span>:     <span class="c"># Cython types are evaluated as for cdef declarations</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">06</span>:     <span class="n">x</span><span class="p">:</span> <span class="n">cython</span><span class="o">.</span><span class="n">int</span>               <span class="c"># cdef int x</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">07</span>:     <span class="n">y</span><span class="p">:</span> <span class="n">cython</span><span class="o">.</span><span class="n">double</span> <span class="o">=</span> <span class="mf">0.57721</span>  <span class="c"># cdef double y = 0.57721</span></pre>
+<pre class='cython code score-0 '>  __pyx_v_y = 0.57721;
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">08</span>:     <span class="n">z</span><span class="p">:</span> <span class="n">cython</span><span class="o">.</span><span class="n">float</span> <span class="o">=</span> <span class="mf">0.57721</span>   <span class="c"># cdef float z  = 0.57721</span></pre>
+<pre class='cython code score-0 '>  __pyx_v_z = 0.57721;
+</pre><pre class="cython line score-0">&#xA0;<span class="">09</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">10</span>:     <span class="c"># Python types shadow Cython types for compatibility reasons</span></pre>
+<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">11</span>:     <span class="n">a</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.54321</span>          <span class="c"># cdef double a = 0.54321</span></pre>
+<pre class='cython code score-0 '>  __pyx_v_a = 0.54321;
+</pre><pre class="cython line score-1" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">12</span>:     <span class="n">b</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mf">5</span>                  <span class="c"># cdef object b = 5</span></pre>
+<pre class='cython code score-1 '>  <span class='pyx_macro_api'>__Pyx_INCREF</span>(__pyx_int_5);
+  __pyx_v_b = __pyx_int_5;
+</pre><pre class="cython line score-1" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">13</span>:     <span class="n">c</span><span class="p">:</span> <span class="nb">long</span> <span class="o">=</span> <span class="mf">6</span>                 <span class="c"># cdef object c = 6</span></pre>
+<pre class='cython code score-1 '>  <span class='pyx_macro_api'>__Pyx_INCREF</span>(__pyx_int_6);
+  __pyx_v_c = __pyx_int_6;
+</pre><pre class="cython line score-0">&#xA0;<span class="">14</span>:     <span class="k">pass</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">15</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">16</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">17</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">cclass</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">18</span>: <span class="k">class</span> <span class="nc">A</span><span class="p">:</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">19</span>:     <span class="n">a</span><span class="p">:</span> <span class="n">cython</span><span class="o">.</span><span class="n">int</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">20</span>:     <span class="n">b</span><span class="p">:</span> <span class="n">cython</span><span class="o">.</span><span class="n">int</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">21</span>: </pre>
+<pre class="cython line score-20" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">22</span>:     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">0</span><span class="p">):</span></pre>
+<pre class='cython code score-20 '>/* Python wrapper */
+static int __pyx_pw_10purepython_1A_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_10purepython_1A_1__init__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  PyObject *__pyx_v_b = 0;
   int __pyx_r;
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
-  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("__cinit__ (wrapper)", 0);
+  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("__init__ (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&amp;__pyx_n_s_number,0};
+    static PyObject **__pyx_pyargnames[] = {&amp;__pyx_n_s_b,0};
     PyObject* values[1] = {0};
+    values[0] = ((PyObject *)__pyx_int_0);
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args);
@@ -393,153 +458,57 @@ static int __pyx_pw_13memorymalloc2_10SomeMemory_1__cinit__(PyObject *__pyx_v_se
       kw_args = <span class='py_c_api'>PyDict_Size</span>(__pyx_kwds);
       switch (pos_args) {
         case  0:
-        if (likely((values[0] = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_number)) != 0)) kw_args--;
-        else goto __pyx_L5_argtuple_error;
+        if (kw_args &gt; 0) {
+          PyObject* value = <span class='pyx_c_api'>__Pyx_PyDict_GetItemStr</span>(__pyx_kwds, __pyx_n_s_b);
+          if (value) { values[0] = value; kw_args--; }
+        }
       }
       if (unlikely(kw_args &gt; 0)) {
-        if (unlikely(<span class='pyx_c_api'>__Pyx_ParseOptionalKeywords</span>(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__cinit__") &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 7, __pyx_L3_error)</span>
+        if (unlikely(<span class='pyx_c_api'>__Pyx_ParseOptionalKeywords</span>(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 22, __pyx_L3_error)</span>
       }
-    } else if (<span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args) != 1) {
-      goto __pyx_L5_argtuple_error;
     } else {
-      values[0] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 0);
+      switch (<span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)) {
+        case  1: values[0] = <span class='py_macro_api'>PyTuple_GET_ITEM</span>(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
     }
-    __pyx_v_number = <span class='pyx_c_api'>__Pyx_PyInt_As_size_t</span>(values[0]); if (unlikely((__pyx_v_number == (size_t)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 7, __pyx_L3_error)</span>
+    __pyx_v_b = values[0];
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("__cinit__", 1, 1, 1, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 7, __pyx_L3_error)</span>
+  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("__init__", 0, 0, 1, <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args)); <span class='error_goto'>__PYX_ERR(0, 22, __pyx_L3_error)</span>
   __pyx_L3_error:;
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("memorymalloc2.SomeMemory.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("purepython.A.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return -1;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_13memorymalloc2_10SomeMemory___cinit__(((struct __pyx_obj_13memorymalloc2_SomeMemory *)__pyx_v_self), __pyx_v_number);
+  __pyx_r = __pyx_pf_10purepython_1A___init__(((struct __pyx_obj_10purepython_A *)__pyx_v_self), __pyx_v_b);
 
   /* function exit code */
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
 
-static int __pyx_pf_13memorymalloc2_10SomeMemory___cinit__(struct __pyx_obj_13memorymalloc2_SomeMemory *__pyx_v_self, size_t __pyx_v_number) {
+static int __pyx_pf_10purepython_1A___init__(struct __pyx_obj_10purepython_A *__pyx_v_self, PyObject *__pyx_v_b) {
   int __pyx_r;
   <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
-  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("__cinit__", 0);
+  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("__init__", 0);
 /* … */
   /* function exit code */
   __pyx_r = 0;
   goto __pyx_L0;
   __pyx_L1_error:;
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("memorymalloc2.SomeMemory.__cinit__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("purepython.A.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = -1;
   __pyx_L0:;
   <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
   return __pyx_r;
 }
-</pre><pre class="cython line score-0">&#xA0;<span class="">08</span>:         <span class="c"># allocate some memory (uninitialised, may contain arbitrary data)</span></pre>
-<pre class="cython line score-5" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">09</span>:         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">double</span> <span class="o">*</span> <span class="o">&gt;</span> <span class="n">PyMem_Malloc</span><span class="p">(</span><span class="n">number</span> <span class="o">*</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">double</span><span class="p">))</span></pre>
-<pre class='cython code score-5 '>  __pyx_v_self-&gt;data = ((double *)<span class='py_c_api'>PyMem_Malloc</span>((__pyx_v_number * (sizeof(double)))));
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">10</span>:         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span></pre>
-<pre class='cython code score-0 '>  __pyx_t_1 = ((!(__pyx_v_self-&gt;data != 0)) != 0);
-  if (unlikely(__pyx_t_1)) {
-/* … */
-  }
-</pre><pre class="cython line score-5" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">11</span>:             <span class="k">raise</span> <span class="ne">MemoryError</span><span class="p">()</span></pre>
-<pre class='cython code score-5 '>    <span class='py_c_api'>PyErr_NoMemory</span>(); <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L1_error)</span>
-</pre><pre class="cython line score-0">&#xA0;<span class="">12</span>: </pre>
-<pre class="cython line score-12" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">13</span>:     <span class="k">def</span> <span class="nf">resize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size_t</span> <span class="n">new_number</span><span class="p">):</span></pre>
-<pre class='cython code score-12 '>/* Python wrapper */
-static PyObject *__pyx_pw_13memorymalloc2_10SomeMemory_3resize(PyObject *__pyx_v_self, PyObject *__pyx_arg_new_number); /*proto*/
-static PyObject *__pyx_pw_13memorymalloc2_10SomeMemory_3resize(PyObject *__pyx_v_self, PyObject *__pyx_arg_new_number) {
-  size_t __pyx_v_new_number;
-  PyObject *__pyx_r = 0;
-  <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
-  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("resize (wrapper)", 0);
-  assert(__pyx_arg_new_number); {
-    __pyx_v_new_number = <span class='pyx_c_api'>__Pyx_PyInt_As_size_t</span>(__pyx_arg_new_number); if (unlikely((__pyx_v_new_number == (size_t)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 13, __pyx_L3_error)</span>
-  }
-  goto __pyx_L4_argument_unpacking_done;
-  __pyx_L3_error:;
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("memorymalloc2.SomeMemory.resize", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
-  return NULL;
-  __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_13memorymalloc2_10SomeMemory_2resize(((struct __pyx_obj_13memorymalloc2_SomeMemory *)__pyx_v_self), ((size_t)__pyx_v_new_number));
-
-  /* function exit code */
-  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_13memorymalloc2_10SomeMemory_2resize(struct __pyx_obj_13memorymalloc2_SomeMemory *__pyx_v_self, size_t __pyx_v_new_number) {
-  double *__pyx_v_mem;
-  PyObject *__pyx_r = NULL;
-  <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
-  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("resize", 0);
-/* … */
-  /* function exit code */
-  __pyx_r = Py_None; <span class='pyx_macro_api'>__Pyx_INCREF</span>(Py_None);
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  <span class='pyx_c_api'>__Pyx_AddTraceback</span>("memorymalloc2.SomeMemory.resize", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
-  <span class='refnanny'>__Pyx_XGIVEREF</span>(__pyx_r);
-  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
-  return __pyx_r;
-}
-</pre><pre class="cython line score-0">&#xA0;<span class="">14</span>:         <span class="c"># Allocates new_number * sizeof(double) bytes,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">15</span>:         <span class="c"># preserving the current content and making a best-effort to</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">16</span>:         <span class="c"># re-use the original data location.</span></pre>
-<pre class="cython line score-5" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">17</span>:         <span class="n">mem</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">double</span> <span class="o">*</span> <span class="o">&gt;</span> <span class="n">PyMem_Realloc</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">new_number</span> <span class="o">*</span> <span class="n">sizeof</span><span class="p">(</span><span class="n">double</span><span class="p">))</span></pre>
-<pre class='cython code score-5 '>  __pyx_v_mem = ((double *)<span class='py_c_api'>PyMem_Realloc</span>(__pyx_v_self-&gt;data, (__pyx_v_new_number * (sizeof(double)))));
-</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">18</span>:         <span class="k">if</span> <span class="ow">not</span> <span class="n">mem</span><span class="p">:</span></pre>
-<pre class='cython code score-0 '>  __pyx_t_1 = ((!(__pyx_v_mem != 0)) != 0);
-  if (unlikely(__pyx_t_1)) {
-/* … */
-  }
-</pre><pre class="cython line score-5" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">19</span>:             <span class="k">raise</span> <span class="ne">MemoryError</span><span class="p">()</span></pre>
-<pre class='cython code score-5 '>    <span class='py_c_api'>PyErr_NoMemory</span>(); <span class='error_goto'>__PYX_ERR(0, 19, __pyx_L1_error)</span>
-</pre><pre class="cython line score-0">&#xA0;<span class="">20</span>:         <span class="c"># Only overwrite the pointer if the memory was really reallocated.</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">21</span>:         <span class="c"># On error (mem is NULL), the originally memory has not been freed.</span></pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">22</span>:         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">mem</span></pre>
-<pre class='cython code score-0 '>  __pyx_v_self-&gt;data = __pyx_v_mem;
-</pre><pre class="cython line score-0">&#xA0;<span class="">23</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">24</span>:     <span class="k">def</span> <span class="nf">__dealloc__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></pre>
-<pre class='cython code score-0 '>/* Python wrapper */
-static void __pyx_pw_13memorymalloc2_10SomeMemory_5__dealloc__(PyObject *__pyx_v_self); /*proto*/
-static void __pyx_pw_13memorymalloc2_10SomeMemory_5__dealloc__(PyObject *__pyx_v_self) {
-  <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
-  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("__dealloc__ (wrapper)", 0);
-  __pyx_pf_13memorymalloc2_10SomeMemory_4__dealloc__(((struct __pyx_obj_13memorymalloc2_SomeMemory *)__pyx_v_self));
-
-  /* function exit code */
-  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
-}
-
-static void __pyx_pf_13memorymalloc2_10SomeMemory_4__dealloc__(struct __pyx_obj_13memorymalloc2_SomeMemory *__pyx_v_self) {
-  <span class='refnanny'>__Pyx_RefNannyDeclarations</span>
-  <span class='refnanny'>__Pyx_RefNannySetupContext</span>("__dealloc__", 0);
-/* … */
-  /* function exit code */
-  <span class='refnanny'>__Pyx_RefNannyFinishContext</span>();
-}
-</pre><pre class="cython line score-5" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">25</span>:         <span class="n">PyMem_Free</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>  <span class="c"># no-op if self.data is NULL</span></pre>
-<pre class='cython code score-5 '>  <span class='py_c_api'>PyMem_Free</span>(__pyx_v_self-&gt;data);
-</pre><pre class="cython line score-0">&#xA0;<span class="">26</span>: <span class="k">import</span> <span class="nn">cython</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">27</span>: </pre>
-<pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">28</span>: <span class="k">if</span> <span class="n">cython</span><span class="o">.</span><span class="n">compiled</span><span class="p">:</span></pre>
-<pre class='cython code score-0 '>  __pyx_t_1 = (1 != 0);
-  if (__pyx_t_1) {
-/* … */
-    goto __pyx_L2;
-  }
-</pre><pre class="cython line score-2" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">29</span>:     <span class="k">print</span><span class="p">(</span><span class="s">&quot;Yep, I&#39;m compiled.&quot;</span><span class="p">)</span></pre>
-<pre class='cython code score-2 '>    if (<span class='pyx_c_api'>__Pyx_PrintOne</span>(0, __pyx_kp_s_Yep_I_m_compiled) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 29, __pyx_L1_error)</span>
-</pre><pre class="cython line score-0">&#xA0;<span class="">30</span>: <span class="k">else</span><span class="p">:</span></pre>
-<pre class="cython line score-2" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">31</span>:     <span class="k">print</span><span class="p">(</span><span class="s">&quot;Just a lowly interpreted script.&quot;</span><span class="p">)</span></pre>
-<pre class='cython code score-2 '>  /*else*/ {
-    if (<span class='pyx_c_api'>__Pyx_PrintOne</span>(0, __pyx_kp_s_Just_a_lowly_interpreted_script) &lt; 0) <span class='error_goto'>__PYX_ERR(0, 31, __pyx_L1_error)</span>
-  }
-  __pyx_L2:;
+</pre><pre class="cython line score-0" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">23</span>:         <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="mf">3</span></pre>
+<pre class='cython code score-0 '>  __pyx_v_self-&gt;a = 3;
+</pre><pre class="cython line score-7" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">24</span>:         <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span></pre>
+<pre class='cython code score-7 '>  __pyx_t_1 = <span class='pyx_c_api'>__Pyx_PyInt_As_int</span>(__pyx_v_b); if (unlikely((__pyx_t_1 == (int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 24, __pyx_L1_error)</span>
+  __pyx_v_self-&gt;b = __pyx_t_1;
 </pre></div></body></html>
